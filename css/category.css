@@ -1,0 +1,240 @@
+
+/*占满整个屏幕*/
+body{
+    width: 100%;
+    height: 100%;
+    background-color: #f3f5f7;
+    color: #666666;
+}
+
+
+
+/*头部搜索栏*/
+.jd_header{
+    width: 100%;
+}
+
+.jd_header .jd_nav_top{
+    position: relative;
+    background: url("../img/header-bg.png")  0 0 / 1px 44px repeat-x;
+    z-index: 2000;
+}
+
+/*返回按钮*/
+.jd_nav_top a.icon_back{
+    position: absolute;
+    width: 38px;
+    height: 44px;
+    padding: 12px 9px;
+    background-position: -20px 0;
+
+    z-index: 1000;
+
+    background-clip: content-box; /*背景显示区域,超出content的被裁减掉*/
+    background-origin: content-box; /*背景从content开始显示*/
+}
+
+/*表单元素*/
+.jd_nav_top form{
+    height: 44px;
+    padding:  4px 38px;
+    position: relative;
+}
+
+.jd_nav_top form::after{
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: url(../img/sprites.png) no-repeat -60px -109px  / 200px 200px;
+    top: 12px;
+    left: 50px;
+}
+
+.jd_nav_top form input{
+    height: 34px;
+    width: 100%;
+    padding: 0 35px;
+    border-radius: 17px;
+    border: 1px solid #e0e0e0;
+}
+
+/*快捷方式图标*/
+.jd_nav_top .icon_shortcut{
+    background-position: -60px 0;
+    position: absolute;
+    width: 38px;
+    height: 44px;
+    top: 0;
+    right: 0;
+
+    padding: 12px 9px;
+    -webkit-background-clip: content-box;
+    background-clip: content-box;
+
+    -webkit-background-origin:content-box;
+    background-origin:content-box;
+
+}
+
+/*shortcut*/
+.jd_header .shortcut{
+    width: 100%;
+    height: 57px;
+    background-color: #404042;
+    display: none;
+}
+
+
+.shortcut ul{
+    width: 100%;
+    height: 100%;
+    background-color: #404042;
+}
+
+.shortcut ul > li{
+    /*display: table-cell;*/
+    float: left;
+    width: 25%;
+    height: 100%;
+    position: relative;
+}
+.shortcut ul > li:nth-of-type(2){
+    background-color: #2d2d2d;
+}
+
+.shortcut ul > li > a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+.shortcut ul > li > a > span.icon_home{
+    background-position: -30px -27px;
+}
+.shortcut ul > li > a > span.icon_category{
+    background-position: -60px -27px;
+}
+.shortcut ul > li > a > span.icon_cart{
+    background-position: -90px -27px;
+}
+.shortcut ul > li > a > span.icon_me{
+    background-position: -120px -27px;
+}
+
+.shortcut ul > li > a > p{
+    color: #ffffff;
+    margin-top: -3px;
+}
+
+/*内容区*/
+/*左边分类列表*/
+.jd_main{
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.jd_main .jd_category_item{
+
+    width: 76px;
+    height: 100%;
+    overflow: hidden;
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
+.jd_category_item ul > li{
+    width: 99%;
+    height: 45px;
+    text-align: center;
+    line-height: 45px;
+    position: relative;
+}
+
+
+.jd_category_item ul > li::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    width: 200%;
+    height: 200%;
+    /* 课后遇到不同方向的细边框的时候，只需要修改此处的border即可 */
+    border-right: 1px solid #e0e0e0;
+    border-bottom: 1px solid #e0e0e0;
+    border-top: none;
+    border-left: none;
+    transform: scale(0.5);
+    -webkit-transform: scale(0.5);
+    /* 需要在放大情况下，根据position的left和top值，稍作调整 */
+    transform-origin: 0 0;
+    -webkit-transform-origin: 0 0;
+}
+
+
+
+/*右边内容开始*/
+.jd_main .content_right{
+    /*overflow: hidden;*/
+    /*上课听讲为什么使用overflow:hidden*/
+    height: 100%;
+    padding: 10px 10px 10px 85px;
+
+    overflow: hidden;
+
+}
+
+/*banner图*/
+.content_right .jd_content_banner{
+    margin-bottom: 10px;
+}
+
+.content_right .jd_content_banner a img{
+    width: 100%;
+}
+
+
+/*主题设置*/
+.content_right .theme{
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.content_right .theme h4{
+    height: 30px;
+    line-height: 30px;
+    font-weight: normal;
+    color: black;
+}
+
+.theme ul{
+    background-color: #fff;
+}
+.theme ul > li{
+    width: 33.33%;
+    float: left;
+    padding: 10px;
+}
+
+.theme ul > li img{
+    width: 100%;
+}
+
+.theme ul > li > a > p {
+    text-align: center;
+}
+
+
+.current a{
+    color: #f15353;
+}
+
+
+

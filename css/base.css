@@ -1,0 +1,162 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    /*默认设置盒子不会因为设置margin | padding而改变宽高*/
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+
+    /*清楚移动设备的默认高亮状态*/
+    -webkit-tap-highlight-color: transparent;
+}
+
+html{
+
+    /*这个地方设置font-size的目的是为了子元素使用rem设置时,可以以父元素html内设置的
+    font-size为标准
+
+    计算公式 : 子元素设置的rem * 父元素的font-size = 真是的px值
+    */
+    font-size: 20px;
+}
+
+body{
+    /*我设置默认字体为12px*/
+    /*单位设置rem的话,会找到父元素设置的font-size值来相乘,等到的最终值单位为px*/
+    /*设置全局字体颜色 | 背景颜色 | 字体*/
+    font-size: 0.6rem;
+    font-family: "Microsoft YaHei",Arial,Helvetica,sans-serif;
+    color: #666666;
+    background-color: #f5f5f5;
+}
+
+a{
+    /*删除下划线*/
+    text-decoration: none;
+    /*默认字体颜色*/
+    color: #666;
+}
+
+input ,textarea{
+    /*去除边框*/
+    outline: none;
+    /*去除iOS默认的一些非扁平化控件效果(风格不符合不如不要)*/
+    -webkit-appearance: none;
+}
+
+ul,ol{
+    /*去除小圆点*/
+    list-style: none;
+}
+
+/*使用伪元素清除浮动*/
+.clearFloat::after,
+.clearFloat::before{
+    /*只要使用伪元素就带上content*/
+    content: "";
+    display: block;
+    height: 0;
+    clear: both;
+    /*隐藏元素*/
+    visibility: hidden;
+
+    /*可选optional*/
+    overflow: hidden;
+}
+
+.light_border::before{
+    content: "";
+
+    position: absolute;
+    left: -1px;
+    top: -1px;
+
+    width: 200%;
+    height: 200%;
+    transform: scale(0.5);
+    border: 1px solid #e0e0e0;
+    /*border: 1px solid #e0e0e0;*/
+    /* 需要在放大情况下，根据position的left和top值，稍作调整 */
+    transform-origin: 1px 1px;
+}
+
+
+.light_border_bdb::before{
+    content: "";
+
+    position: absolute;
+    left: -1px;
+    top: -1px;
+
+    width: 200%;
+    height: 200%;
+    transform: scale(0.5);
+    border-bottom: 1px solid #e0e0e0;
+    /* 需要在放大情况下，根据position的left和top值，稍作调整 */
+    transform-origin: 1px 1px;
+}
+
+.light_border_bdt::before{
+    content: "";
+
+    position: absolute;
+    left: -1px;
+    top: -1px;
+
+    width: 200%;
+    height: 200%;
+    transform: scale(0.5);
+    border-top: 1px solid #e0e0e0;
+    /* 需要在放大情况下，根据position的left和top值，稍作调整 */
+    transform-origin: 1px 1px;
+}
+
+.light_border_bdr::before{
+    content: "";
+
+    position: absolute;
+    left: -1px;
+    top: -1px;
+
+    width: 200%;
+    height: 200%;
+    transform: scale(0.5);
+    border-right: 1px solid #e0e0e0;
+    /* 需要在放大情况下，根据position的left和top值，稍作调整 */
+    transform-origin: 1px 1px;
+}
+.light_border_bdl::before{
+    content: "";
+
+    position: absolute;
+    left: -1px;
+    top: -1px;
+
+    width: 200%;
+    height: 200%;
+    transform: scale(0.5);
+    border-left: 1px solid #e0e0e0;
+    /* 需要在放大情况下，根据position的left和top值，稍作调整 */
+    transform-origin: 1px 1px;
+}
+
+
+
+/*抽取代码*/
+ul > li > a{
+    display: inline-block;
+    width: 100%;
+}
+
+
+[class^="icon_"],[class*=" icon_"]{
+    background: url("../img/sprites.png") no-repeat;
+    background-size: 200px 200px;
+}
+
+.shortcut ul > li > a > span{
+    display: inline-block;
+    margin-top: 5px;
+    height: 30px;
+    width: 30px;
+}

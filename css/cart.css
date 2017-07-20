@@ -1,0 +1,440 @@
+body{
+    color: black;
+}
+
+.jd_header{
+    width: 100%;
+}
+
+.jd_header .jd_nav_top{
+    position: relative;
+    background: url("../img/header-bg.png")  0 0 / 1px 44px repeat-x;
+    z-index: 2000;
+}
+
+/*返回按钮*/
+.jd_nav_top a.icon_back{
+    position: absolute;
+    width: 38px;
+    height: 44px;
+    padding: 12px 9px;
+    background-position: -20px 0;
+
+    z-index: 1000;
+
+    background-clip: content-box; /*背景显示区域,超出content的被裁减掉*/
+    background-origin: content-box; /*背景从content开始显示*/
+}
+
+.jd_nav_top span.jd_header_title{
+    display: inline-block;
+    width: 100%;
+    font-size: 14px;
+    color: #222;
+    line-height: 44px;
+    text-align: center;
+}
+
+/*表单元素*/
+.jd_nav_top form{
+    height: 44px;
+    padding:  4px 38px;
+    position: relative;
+}
+
+.jd_nav_top form::after{
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: url(../img/sprites.png) no-repeat -60px -109px  / 200px 200px;
+    top: 12px;
+    left: 50px;
+}
+
+
+
+
+.jd_nav_top form input{
+    height: 34px;
+    width: 100%;
+    padding: 0 35px;
+    border-radius: 17px;
+    border: 1px solid #e0e0e0;
+}
+
+/*快捷方式图标*/
+.jd_nav_top .icon_shortcut{
+    background-position: -60px 0;
+    position: absolute;
+    width: 38px;
+    height: 44px;
+    top: 0;
+    right: 0;
+
+    padding: 12px 9px;
+    -webkit-background-clip: content-box;
+    background-clip: content-box;
+
+    -webkit-background-origin:content-box;
+    background-origin:content-box;
+
+}
+
+/*shortcut*/
+.jd_header .shortcut{
+    width: 100%;
+    height: 57px;
+    background-color: #404042;
+    display: none;
+}
+
+
+.shortcut ul{
+    width: 100%;
+    height: 100%;
+    background-color: #404042;
+}
+
+.shortcut ul > li{
+    /*display: table-cell;*/
+    float: left;
+    width: 25%;
+    height: 100%;
+    position: relative;
+}
+
+
+.shortcut_cur{
+    background-color: #2d2d2d;
+}
+
+.shortcut ul > li > a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+.shortcut ul > li > a > span.icon_home{
+    background-position: -30px -27px;
+}
+.shortcut ul > li > a > span.icon_category{
+    background-position: -60px -27px;
+}
+.shortcut ul > li > a > span.icon_cart{
+    background-position: -90px -27px;
+}
+.shortcut ul > li > a > span.icon_me{
+    background-position: -120px -27px;
+}
+
+.shortcut ul > li > a > p{
+    color: #ffffff;
+    margin-top: -3px;
+}
+
+
+/*安全提示*/
+.safe_title{
+    text-align: center;
+    background-color: #ffffff;
+
+}
+
+.safe_title > span.safe_tip{
+    display: inline-block;
+    padding-left: 20px;
+    line-height: 34px;
+    font-size: 14px;
+    position: relative;
+}
+
+.safe_title > span.safe_tip::before{
+    content: "";
+    position: absolute;
+    top: 7px;
+    left: 0;
+    width: 18px;;
+    height: 18px;
+    background: url("../img/safe_icon.png") 0 0 / 18px 18px no-repeat;
+}
+
+/*商品中心*/
+.products_center{
+    padding: 10px 10px 0;
+    background-color: #f5f5f5;
+}
+
+
+/*商品头部*/
+.products_center > .product_header{
+    background-color: #fff;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+span.checked_box{
+    float: left;
+    width: 44px;
+    height: 44px;
+    padding: 12px;
+    background: url(../img/shop-icon.png) -25px 0 / 50px 100px no-repeat;
+
+    -webkit-background-origin: content-box;
+    background-origin: content-box;
+
+    -webkit-background-clip: content-box;
+    background-clip: content-box;
+}
+
+span[checked]{
+    background-position: 0 0;
+}
+
+.product_header > div.product_header_store{
+    overflow: hidden;
+    height: 44px;
+}
+
+.product_header_store > .product_name{
+    padding-left: 20px;
+    line-height: 44px;
+    position: relative;
+    font-size: 14px;
+}
+
+.product_header_store > .product_name::before{
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 0;
+    width: 16px;
+    height: 16px;
+    background: url(../img/buy-logo.png) 0 0 / 16px 16px no-repeat;
+}
+
+.product_header_store > .product_favorable
+{
+    height: 44px;
+    line-height: 44px;
+    float: right;
+    color: #f23030;
+    padding-right: 10px;
+}
+
+
+/*商品详情*/
+.products_center > .products_center_menu{
+    padding-top: 10px;
+    background-color: #fff;
+}
+
+.products_center_menu > li{
+    border-bottom: 2px solid #e0e0e0;
+    /*test H */
+}
+
+.products_center_menu .product_detail{
+
+}
+
+.products_center_menu .product_detail > .checked_box{
+    margin-top: 20px;
+}
+
+.product_detail > .product_goods{
+    overflow: hidden;
+}
+
+.product_detail .product_goods > img{
+    width: 88px;
+    height: 88px;
+    float: left;
+    margin-top: 10px;
+}
+
+.product_detail .goods_details{
+    overflow: hidden;
+    padding: 10px 10px;
+}
+
+.goods_details > .goods_details_top > .goods_desc{
+    padding: 0 3px;
+    overflow: hidden;
+    height: 1.5rem;
+    line-height: 0.75rem;
+
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    /* 写了会报错,就不写了
+    word-break: break-word;
+    */
+}
+
+.goods_details > .goods_details_top > .goods_prices{
+    color: #f23030;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.goods_details > .goods_details_bottom{
+    padding: 10px 0;
+}
+
+.goods_details_bottom > .counter{
+    float: left;
+    width: 90px;
+    height: 30px;
+}
+
+.goods_details_bottom > .counter > .count_minus{
+    float: left;
+    text-align: center;
+    line-height: 25px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #e0e0e0;
+}
+
+.goods_details_bottom > .counter > .cout_add{
+    float: left;
+    text-align: center;
+    line-height: 25px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #e0e0e0;
+}
+
+.goods_details_bottom > .counter > input{
+    border-bottom: 1px solid #e0e0e0;
+    border-top: 1px solid #e0e0e0;
+    text-align: center;
+    line-height: 30px;
+    float: left;
+    width: 30px;
+    height: 30px;
+}
+
+.goods_details_bottom > .garbage{
+    float: right;
+    position: relative;
+    height: 30px;
+    width: 30px;
+}
+
+.goods_details_bottom > .garbage .garbage_up{
+    position: absolute;
+    top: 9px;
+    left: 6px;
+    width: 18px;
+    height: 4px;
+    background: url("../img/delete_up.png") 0 0 / 18px 4px no-repeat;
+}
+
+.goods_details_bottom > .garbage .garbage_down{
+    position: absolute;
+    top: 10px;
+    left: 6px;
+    width: 18px;
+    height: 18px;
+    background: url("../img/delete_down.png") 0 0 / 18px 18px no-repeat;
+}
+
+
+/*删除蒙版*/
+.del_mask {
+    position: fixed;
+    display: none;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0 ,0, 0.6);
+    z-index: 2000;
+}
+
+.del_mask > .del_message{
+    position: absolute;
+    width: 80%;
+    height: 14%;
+    top: 43%;
+    left: 10%;
+    background-color: #fff;
+    border-radius: 4px;
+}
+
+.del_mask > .del_message > .message_title{
+    text-align: center;
+    padding: 10px;
+    font-size: 16px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.del_mask > .del_message > .choose_btn{
+    padding: 10px;
+}
+
+.del_mask > .del_message > .choose_btn > span.cancel{
+    float: left;
+    width: 45%;
+    line-height: 30px;
+    text-align: center;
+    color: #ffffff;
+    background-color: #f23030;
+    border-radius: 5px;
+}
+
+.del_mask > .del_message > .choose_btn > span.sure{
+    float: right;
+    width: 45%;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 5px;
+    border: 1px solid #e0e0e0;
+}
+
+/*弹簧效果*/
+/**
+ * 动画三要素
+ *  - 设置动画的名称 时长 速度
+ *  - 设置动画路径
+ *  - 如果业务逻辑简单  ->> from to形式
+ *  - 如果业务逻辑复杂  ->> 百分比形式
+ */
+.springJump{
+    animation: spring_jump 1s ease;
+}
+
+
+@keyframes spring_jump {
+    0%{
+        opacity: 0;
+        transform: translateY(-3000px);
+    }
+    50%{
+        opacity: 1;
+        transform: translateY(50px);
+    }
+    60%{
+        opacity: 1;
+        transform: translateY(-20px);
+    }
+    70%{
+        opacity: 1;
+        transform: translateY(30px);
+    }
+    80%{
+        opacity: 1;
+        transform: translateY(-10px);
+    }
+    90%{
+        opacity: 1;
+        transform: translateY(10px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}

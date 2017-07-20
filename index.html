@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--视图,让手机上能够以1px : 1px显示PC端上数据-->
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+    <!--告诉浏览器作者是谁-->
+    <meta name="author" content="lwq">
+
+    <!--告诉搜索引擎关键字是什么-->
+    <meta name="Keywords" content="网上购物,手机,笔记本,电脑,MP3,CD,VCD,DV,相机,数码,配件,手表,存储卡,京东商城">
+
+    <!--告诉搜索引擎网页的内容有什么-->
+    <meta name="description" content="京东JD.COM-专业的综合网上购物商城,在线销售家电、数码、电脑、服装、母婴、图书、食品等数万个品牌商品.便捷、诚信的服务,为您提供愉悦的网上商城购物体验!">
+
+
+    <!--打开手机对webAPP样式支持-->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!--设置手机中状态栏样式，为黑色-->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <!--设置不识别网页中的数字为电话号码，也可以设置不识别邮箱-->
+    <meta name="format-detection" content="telephone=no，email=no">
+
+    <!--导入自己的css样式表-->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/index.css">
+    <title>M.JD</title>
+</head>
+<body>
+<!--视图-->
+<div class="jd_viewport">
+    <!--头部导航栏-->
+    <div class="jd_header_nav_bar">
+        <div class="head_top" id="head_top">
+            <form class="search">
+                <span class="jd_icon_log"></span>
+                <span class="jd_icon_search"></span>
+                <input type="text" placeholder="我是站位文字"></form>
+            <a class="login" href="">登录</a></div>
+    </div>
+    <!--banner-->
+    <div class="jd_banner" id="jd_banner">
+        <ul class="clearFloat" id="bannerUl">
+            <li><a href="javascript:void (0);"><img src="img/l8.jpg" alt=""></a></li>
+            <li><a href="javascript:void (0);"><img src="img/l1.jpg" alt=""></a></li>
+            <li><a href="javascript:void (0);"><img src="img/l2.jpg" alt=""></a></li>
+            <li><a href="javascript:void (0);"><img src="img/l3.jpg" alt=""></a></li>
+            <li><a href="javascript:void (0);"><img src="img/l4.jpg" alt=""></a></li>
+            <li><a href="javascript:void (0);"><img src="img/l5.jpg" alt=""></a></li>
+            <li><a href="javascript:void (0);"><img src="img/l6.jpg" alt=""></a></li>
+            <li><a href="javascript:void (0);"><img src="img/l7.jpg" alt=""></a></li>
+            <li><a href="javascript:void (0);"><img src="img/l8.jpg" alt=""></a></li>
+            <li><a href="javascript:void (0);"><img src="img/l1.jpg" alt=""></a></li>
+        </ul>
+        <ol id="bannerOl">
+            <li class="current"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ol>
+    </div>
+    <!--分类菜单-->
+    <div class="jd_category">
+        <ul class="clearFloat">
+            <li>
+                <a href="">
+                    <img src="img/nav1.png" alt="">
+                    <p>京东超市</p>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <img src="img/nav2.png" alt="">
+                    <p>全球购</p>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <img src="img/nav3.png" alt="">
+                    <p>服装城</p>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <img src="img/nav4.png" alt="">
+                    <p>京东生鲜</p>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <img src="img/nav5.png" alt="">
+                    <p>京东到家</p>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <img src="img/nav6.png" alt="">
+                    <p>充值缴费</p>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <img src="img/nav7.png" alt="">
+                    <p>领豆豆</p>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <img src="img/nav8.png" alt="">
+                    <p>领券</p>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <img src="img/nav9.png" alt="">
+                    <p>物流查询</p>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <img src="img/nav10.png" alt="">
+                    <p>惠赚钱</p>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <!--商品中心-->
+    <div class="jd_main">
+        <!--产品三部曲之秒杀部分-->
+        <div class="jd_seckill">
+            <div class="jd_seckill_header ">
+                <a class="jd_seckill_left" id="seckill_left" href="">
+                    <img src="img/seckill-icon.png" alt="">
+                    <strong><em>12</em>点场</strong>
+                    <div class="seckill_count_down">
+                        <div class="seckill_time light_border">
+                            <span>0</span>
+                            <span>0</span>
+                        </div>
+                        <span>:</span>
+                        <div class="seckill_time light_border">
+                            <span>0</span>
+                            <span>0</span>
+                        </div>
+                        <span>:</span>
+                        <div class="seckill_time light_border">
+                            <span>0</span>
+                            <span>0</span>
+                        </div>
+                    </div>
+                </a>
+                <a class="jd_seckill_right" href="">
+                    贱货好货论文
+                </a>
+            </div>
+            <div class="seckill_commodity">
+                <ul class="clearFloat">
+                    <li>
+                        <a herf="" class="light_border_bdr">
+                            <img src="img/detail01.jpg" alt="">
+                        </a>
+                        <strong>¥1999</strong>
+                        <span>¥12099</span>
+                    </li>
+                    <li>
+                        <a herf="" class="light_border_bdr">
+                            <img src="img/detail02.jpg" alt="">
+                        </a>
+                        <strong>¥999</strong>
+                        <span>¥1099</span>
+                    </li>
+                    <li>
+                        <a herf="">
+                            <img src="img/detail03.jpg" alt="">
+                        </a>
+                        <strong>¥999</strong>
+                        <span>¥1099</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!--产品三部曲之主题部分-->
+        <section class="jd_theme">
+            <div class="jd_theme_header light_border_bdb">
+                <h3>京东乐购</h3>
+            </div>
+            <div class="jd_theme_body">
+                <ul class="clearFloat">
+                    <li class="light_border_bdr">
+                        <a href="">
+                            <img src="img/cp1.jpg" alt="">
+                        </a>
+                    </li>
+                    <li class="light_border_bdb">
+                        <a href="">
+                            <img src="img/cp2.jpg" alt="">
+                        </a>
+                    </li>
+                    <li class="">
+                        <a href="">
+                            <img src="img/cp3.jpg" alt="">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="jd_theme">
+            <div class="jd_theme_header">
+                <h3>京东超市</h3>
+            </div>
+            <div class="jd_theme_body">
+                <ul class="clearFloat">
+                    <li class="fr light_border_bdl">
+                        <a href="">
+                            <img src="img/cp4.jpg" alt="">
+                        </a>
+                    </li>
+                    <li class="fl light_border_bdb">
+                        <a href="">
+                            <img src="img/cp6.jpg" alt="">
+                        </a>
+                    </li>
+                    <li class="fl">
+                        <a href="">
+                            <img src="img/cp5.jpg" alt="">
+                        </a>
+                    </li>
+
+
+                </ul>
+            </div>
+        </section>
+        <section class="jd_theme">
+            <div class="jd_theme_header light_border_bdb">
+                <h3>京东乐分享</h3>
+            </div>
+            <div class="jd_theme_body">
+                <ul class="clearFloat">
+                    <li class="light_border_bdr">
+                        <a href="">
+                            <img src="img/cp1.jpg" alt="">
+                        </a>
+                    </li>
+                    <li class="light_border_bdb">
+                        <a href="">
+                            <img src="img/cp2.jpg" alt="">
+                        </a>
+                    </li>
+                    <li class="">
+                        <a href="">
+                            <img src="img/cp3.jpg" alt="">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!--产品三部曲之为你推荐-->
+        <div class="jd_recommend_title">
+            <span>为您推荐</span>
+        </div>
+        <div class="jd_recommend_body">
+            <ul class="clearFloat">
+                <li>
+                    <a href="">
+                        <img src="img/intro1.jpg" alt="">
+                        <span>这里是写产这里是写产品的描述内容这里是写产品的描述内容这里是写产品的描述内容这里是写产品的描述内容品的描述内容</span>
+                    </a>
+                    <div class="recommend_con_bottom">
+                        <strong class="pro_price">¥999</strong>
+                        <a href="" class="find_like light_border" role="button">找相似</a>
+                    </div>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="img/intro2.jpg" alt="">
+                        <span>这里是写产这里是写产品的描述内容这里是写产品的描述品的描述内容</span>
+                    </a>
+                    <div class="recommend_con_bottom">
+                        <strong class="pro_price">¥999</strong>
+                        <a href="" class="find_like light_border" role="button">找相似</a>
+                    </div>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="img/intro3.jpg" alt="">
+                        <span>这里是写产品的描述内容</span>
+                    </a>
+                    <div class="recommend_con_bottom">
+                        <strong class="pro_price">¥999</strong>
+                        <a href="" class="find_like light_border" role="button">找相似</a>
+                    </div>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="img/intro4.jpg" alt="">
+                        <span>这里是写产品的描述内容</span>
+                    </a>
+                    <div class="recommend_con_bottom">
+                        <strong class="pro_price">¥999</strong>
+                        <a href="" class="find_like light_border" role="button">找相似</a>
+                    </div>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="img/intro2.jpg" alt="">
+                        <span>这里是写产这里是写产品的描述内容这里是写产品的描述品的描述内容</span>
+                    </a>
+                    <div class="recommend_con_bottom">
+                        <strong class="pro_price">¥999</strong>
+                        <a href="" class="find_like light_border" role="button">找相似</a>
+                    </div>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="img/intro3.jpg" alt="">
+                        <span>这里是写产品的描述内容</span>
+                    </a>
+                    <div class="recommend_con_bottom">
+                        <strong class="pro_price">¥999</strong>
+                        <a href="" class="find_like light_border" role="button">找相似</a>
+                    </div>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="img/intro4.jpg" alt="">
+                        <span>这里是写产品的描述内容</span>
+                    </a>
+                    <div class="recommend_con_bottom">
+                        <strong class="pro_price">¥999</strong>
+                        <a href="" class="find_like light_border" role="button">找相似</a>
+                    </div>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="img/intro2.jpg" alt="">
+                        <span>这里是写产这里是写产品的描述内容这里是写产品的描述品的描述内容</span>
+                    </a>
+                    <div class="recommend_con_bottom">
+                        <strong class="pro_price">¥999</strong>
+                        <a href="" class="find_like light_border" role="button">找相似</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+
+    </div>
+
+
+    <!--底部tableBar-->
+    <div class="jd_footer_table_bar">
+        <ul class="clearfix" id="tab_bar_ul">
+            <li><a href=""><img src="img/a-home.png" alt=""></a></li>
+            <li><a href="category.html"><img src="img/n-catergry.png" alt=""></a></li>
+            <li><a href=""><img src="img/n-find.png" alt=""></a></li>
+            <li><a href="cart.html"><img src="img/n-cart.png" alt=""></a></li>
+            <li><a href=""><img src="img/n-me.png" alt=""></a></li>
+        </ul>
+    </div>
+
+
+
+    <!--导入js脚本文件-->
+    <script src="js/main.js"></script>
+    <script src="js/index.js"></script>
+</div>
+</body>
+</html>
